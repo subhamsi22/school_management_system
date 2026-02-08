@@ -100,7 +100,18 @@ else{
 </div>
 <div class="deletbut">
 
-  <button id="delet">  click here to delete student data</button>
+<form action="delete.php" method="post">
+
+  <button id="delet" >  click here to delete student data</button>
+
+
+</form>
+<form action="iddelete.php" method = "post">
+
+<input type="number" placeholder="enter id to delete" name="id" id="inputtid" required>
+<button id="delett" name ="deletee">submit</button>
+
+</form>
 </div>
 
 

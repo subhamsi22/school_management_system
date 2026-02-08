@@ -275,3 +275,27 @@ font-size: 24px;
     text-transform: capitalize;
     font-weight: 500;
 }
+#delett{
+background: #4dabff;
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    margin: 39px;
+    position: relative;
+    width: 10%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    left: 1%;
+    margin-top: 34px;
+    display: flex;
+}
+#inputtid{
+  text-transform: capitalize;
+    width: 12%;
+    margin-left: 40px;
+    border: 5px solid #4dabff;
+
+}

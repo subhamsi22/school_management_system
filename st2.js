@@ -125,3 +125,13 @@ else{
     hg2.style.backgroundColor = "lightblue";
 }
 });
+
+var  delet = document.getElementById("delet");
+delet.addEventListener("click",()=>{
+    if(confirm("are you sure you want to delete all student data?")){
+        return true;
+    }      
+    else{
+        return false;
+    }
+});
