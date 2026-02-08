@@ -1,0 +1,757 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+.banner1{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+background: linear-gradient(135deg, #eef3fa3b, #f8fafcb5, #f1ede982), url(pics/steptodown.com355019.jpg);  background-size: cover;
+background-position: center;
+}
+.nav{
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+}
+.nav ul li{
+  display: inline-block;
+  margin: 27px;
+  position: relative;
+  list-style: none;
+}
+.nav ul{
+  position: relative;
+  left: 139%;
+}
+.nav ul li a{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: black;
+  font-weight: 300;
+}
+.nav ul li::after{
+  content: ' ';
+  bottom: -10px;
+  top: 100%;
+  left: 0px;
+  width: 0%;
+  height: 3px;
+  background-color: rgba(253, 8, 171, 0.89);
+  position: absolute;
+  transition: 0.3s;
+
+
+}
+.nav ul li:hover::after{
+  width: 100%;
+  
+}
+.nav ul li:first-child a{
+color: rgba(253, 8, 171, 0.89);
+;
+}
+.text{
+  width: 100%;
+  height: 100vh;
+}
+.text .hh1{
+  font-family: "Cinzel Decorative", serif;
+    width: 188px;
+    font-size: 46px;
+    position: relative;
+    font-weight: 200;
+    color: #1a1a1a;
+    left: 24%;
+    /* text-align: start; */
+    top: 33%;
+    text-transform: capitalize;
+}
+#p1{
+  text-transform: capitalize;
+    position: relative;
+    top: -64%;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    left: 44%;
+    color: #bdadad;
+    animation: h infinite 3s;
+    transition: 0.2s;
+}
+@keyframes h {
+  0%{
+        color: #bdadad;
+
+  }
+  100%{
+   color: rgba(253, 8, 171, 0.89);
+  }
+}
+
+
+#p2{
+ text-transform: capitalize;
+    position: relative;
+    top: -59%;
+    font-size: 17px;
+    left: 52%;
+    font-family: 'Poppins', sans-serif;
+    color: #bdadad;
+    animation: h infinite 5s;
+    transition: 0.2s;
+}
+@keyframes h {
+  10%{
+        color: #bdadad;
+
+  }
+  100%{
+   color: rgba(16, 18, 99, 0.89);
+  }
+}
+
+#p3{
+ text-transform: capitalize;
+    position: relative;
+    top: -54%;
+    font-size: 17px;
+    left: 44.5%;
+    font-family: 'Poppins', sans-serif;
+    color: #bdadad;
+    animation: h infinite 10s;
+    transition: 0.2s;
+}
+@keyframes h {
+  10%{
+        color: #bdadad;
+
+  }
+  100%{
+   color: rgba(16, 18, 99, 0.89);
+  }
+}
+span{
+  display: inline;
+}
+#butt{
+ left: 46%;
+    display: flex;
+    width: 115px;
+    height: 38px;
+    position: absolute;
+    top: 64%;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent;
+    text-transform: capitalize;
+    background: rgba(253, 8, 171, 0.89);
+    color: #fff;
+}
+#butt::after{
+    border-radius: 10px;
+    content: ' ';
+    position: absolute;
+    background-color: #fff;
+  width: 96px;
+    top: -3px;
+    height: 0px;
+    padding: 10px;
+    color: #000;
+transition: 0.4s;
+visibility: hidden;
+}
+#butt:hover::after{
+    content: "Get-Started ";
+    text-transform: capitalize;
+    height: 21px;
+visibility: visible;
+}
+.banner2{
+width: 100%;
+    height: 100vh;
+    background: #ffffff;
+}
+#img{
+position: relative;
+    top: 68%;
+    left: 48%;
+    transition: 0.2s;
+    filter: invert(1);
+    
+    width: 11%;
+    clip-path: circle(35%);
+    z-index: 2;
+    opacity: 0.3;
+    transform: rotate(94deg);
+    height: 22%;
+    box-shadow: -20px -20px 20px 20px red;
+}
+.boxes .b{
+  width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 26%;
+    left: 107%;
+}
+.boxes .b2{
+     width: 30px;
+    height: 30px;
+    background: rgb(12, 106, 109);
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 24%;
+    left: 221%;
+
+}
+.boxes .b3{
+  width: 30px;
+    height: 30px;
+    background: #bcbecc;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 24%;
+    left: 327%;
+}
+
+.container{
+ 
+ display: flex;
+    position: relative;
+    width: 100%;
+    top: -155px;
+    height: 100vh;
+    /* z-index: -2; */
+    overflow: hidden;
+
+}
+.slide
+{
+  display: flex;
+      transition: transform 0.4s ease;
+
+}
+.frame{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.box{
+display: flex;
+    width: 27%;
+    height: 64vh;
+    /* background-color: #3F51B5; */
+    flex-shrink: 0;
+    padding: 10px;
+    background: transparent;
+    gap: 30%;
+    border-radius: 30px;
+border: transparent;
+    box-shadow: inset -12px -20px 40px 3px gray;
+    margin: 20px;
+    left: 2%;
+    /* background: url(pics/ttty.png); */
+    background-size: cover;
+    position: relative;
+}
+.boxes{
+  position: absolute;
+  bottom: 40px;
+  left: 34%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 5;
+}
+
+
+.banner3{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background: linear-gradient(black, #ffffff2e), url(pics/steptodown.com724500.jpg);
+}
+.w{
+  color: #2e2b2b;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 5px 1px 20px;
+    font-weight: 100;
+}
+.img_class{
+  z-index: 4;
+    position: absolute;
+    top: -13%;
+    filter: drop-shadow(2px 4px 6px black);
+    left: -6%;
+
+
+}
+
+#ggy{
+  width: 47%;
+    /* background: red; */
+    height: 45%;
+    top: 25%;
+    position: absolute;
+    left: 40%;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #5d5959;
+}
+.img_for_ui{
+  width: 38%;
+    height: 31%;
+    position: relative;
+    top: 33%;
+    left: -71%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.triangle{
+ width: 97%; height: 18%; background: #5d5959; border-radius: 0px 0px 64px 105px;
+}
+#newimg{
+  width: 35%;
+    position: relative;
+    top: 229%;
+
+}
+.newbox{
+  width: 10%;
+    position: relative;
+    height: 19%;
+    background: rgb(59 58 50 / 69%);
+    border-radius: 51%;
+    border: 2px solid orange;
+    top: 40%;
+    left: 8%;
+}
+.secondnewbx{
+  /* box-shadow: inset 16px 20px 40px 40px #ffff; */
+  width: 20%;
+    position: relative;
+    height: 34%;
+    background: #f18462;
+    transform: rotate(205deg);
+    clip-path: polygon(161px 25px, 122% 162%, 0 112%);
+    left: 10%;
+    top: -7%;
+    border: 1px solid;
+}.secondnewbx2{
+ width: 20%;
+    position: relative;
+    height: 34%;
+    background: #ddd450;
+    transform: rotate(24deg);
+    clip-path: polygon(161px 25px, 122% 162%, 0 112%);
+    left: 19%;
+    top: -36%;
+    border: 1px solid;
+}
+#b3h1{
+  color: rgb(67 67 67);
+    position: relative;
+    top: 79%;
+    transform: rotate(157deg);
+    font-weight: 400;
+    font-size: 121%;
+    left: -20%;
+    text-shadow: 14px 20px 20px;
+}
+#b3h11{
+  color: rgb(67 67 67);
+    position: relative;
+    top: 62%;
+    transform: rotate(334deg);
+    font-weight: 400;
+    font-size: 121%;
+    left: 16%;
+    text-shadow: 14px 20px 20px;
+}
+#h3h111{
+  color: rgb(67 67 67);
+    position: relative;
+    top: 83%;
+    transform: rotate(44deg);
+    font-weight: 400;
+    font-size: 121%;
+    left: 31%;
+    text-shadow: 14px 20px 20px;
+}
+#h3h1111{
+  color: rgb(67 67 67);
+    position: relative;
+    top: 41%;
+    transform: rotate(231deg);
+    font-weight: 400;
+    font-size: 121%;
+    left: -6%;
+    text-shadow: 14px 20px 20px;
+}
+.secondnewbx3{
+width: 20%;
+    position: relative;
+    height: 34%;
+    background: #f7f083;
+    transform: rotate(317deg);
+    clip-path: polygon(161px 25px, 122% 162%, 0 112%);
+    left: 12%;
+    top: -42%;
+    border: 1px solid;
+}
+
+
+.secondnewbx4{ 
+width: 20%;
+    position: relative;
+    height: 32%;
+    background: #6982e3;
+    transform: rotate(130deg);
+    clip-path: polygon(161px 25px, 122% 162%, 0 112%);
+    left: 6%;
+    top: -56%;
+    border: 1px solid;
+}
+.banner4{
+  width: 100%;
+  height: 100vh;
+
+}
+
+#banner3h1{
+ content: 'How Our Online Examination System Works';
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 51%;
+    font-family: "Cinzel Decorative", serif;
+    width: 43%;
+    margin: 39px;
+}
+#banner3h1::after{
+  content: 'How Our Online Examination System Works';
+}
+.d1{
+  width: 30px;
+    height: 22px;
+    position: absolute;
+    background: #f18462;
+    top: 235%;
+    left: 53%;
+}
+#d3h1{
+  width: 40%;
+    position: absolute;
+    top: 233%;
+    color: #fff;
+    left: 57%;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.d2{
+  width: 30px;
+    height: 22px;
+    position: absolute;
+    background: #ddd450;
+    top: 245%;
+    left: 53%;
+}
+#d3h2{
+  width: 40%;
+    position: absolute;
+    top: 243%;
+    color: #fff;
+    left: 57%;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.d3{
+  width: 30px;
+    height: 22px;
+    position: absolute;
+    background: #f7f083;
+    top: 255%;
+    left: 53%;
+}
+#d3h3{
+  width: 40%;
+    position: absolute;
+    top: 253%;
+    color: #fff;
+    left: 57%;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.d4{
+  width: 30px;
+    height: 22px;
+    position: absolute;
+    background: #6982e3;
+    top: 265%;
+    left: 53%;
+}
+#d3h4{
+  width: 40%;
+    position: absolute;
+    top: 263%;
+    color: #fff;
+    left: 57%;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+#b4h1{
+  color: #2e2b2b;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 5px 1px 20px;
+    font-weight: 100;
+}
+#b4p1{
+  width: 43%;
+    position: relative;
+    left: 28%;
+    top: 3%;
+    font-weight: 300;
+    text-align: center;
+    color: #5d5959;
+}
+.firstboxb4{
+  width: 27%;
+    height: 50%;
+    background: #ddd8d8;
+    background-size: cover;
+    display: inline-block;
+    background-position: center;
+    position: relative;
+    left: 5%;
+    margin: 20px;
+    border-radius: 30px;
+    top: 11%;
+    border: 2px solid #8080803b;
+}
+#ii{
+  font-size: 100px;
+    color: rgba(253, 8, 171, 0.89);
+    position: relative;
+    top: 35%;
+    position: absolute;
+    left: 35%;
+}
+#firstbox4p1{
+ position: absolute;
+    top: 69%;
+    text-align: center;
+    left: 24%;
+    font-weight: 500;
+    font-size: 107%;
+    color: #5d5959;
+}
+.banner5{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+#b5h1{
+  color: #2e2b2b;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 5px 1px 20px;
+    font-weight: 100;
+}
+#b5p1{
+  width: 43%;
+    position: relative;
+    left: 28%;
+    top: 3%;
+    font-weight: 300;
+    text-align: center;
+    color: #5d5959;
+}
+fieldset{
+  width: 40%;
+    height: 60vh;
+    position: relative;
+    left: 30%;
+    top: 5%;
+    border-radius: 20px;
+    border: 2px solid #8080803b;
+}
+input{
+  width: 80%;
+    height: 8%;
+    position: relative;
+    left: 10%;
+    top: 20%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+textarea{
+  width: 80%;
+    height: 20%;
+    position: relative;
+    left: 10%;
+    top: 30%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+#btn{
+  width: 30%;
+    height: 8%;
+    position: relative;
+    left: 35%;
+    top: 40%;
+    border-radius: 10px;
+    /* border: transparent; */
+    background: rgba(253, 8, 171, 0.89);
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+footer{
+  width: 100%;
+    height: 30vh;
+    background: #000000;
+}
+#footerh1{
+ color: #fff;
+    position: relative;
+    /* top: 40%; */
+    font-size: 111%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+    color: #ffff;
+    padding: 24px;
+    text-transform: capitalize;
+    font-size: 18px;
+    cursor: pointer;
+}
+.bannerlogin{
+  width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #eef3fa3b, #f8fafcb5, #f1ede982), url(pics/steptodown.com355019.jpg);  background-size: cover;
+}
+.bannerlogin{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgb(0 0 0 / 66%) 64%, rgb(0 0 0 / 66%) 30%), url(pics/jio.jpg)
+}
+#gh{
+  width: 100%;
+    height: 60%;
+    background: #ffffff;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 20px 5px gray; */
+    padding: 20px;
+}
+.input{
+  width: 80%;
+    height: 8%;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+#loginbtn{
+  width: 50%;
+    height: 8%;
+    border-radius: 10px;
+    border: transparent;
+    background: rgba(253, 8, 171, 0.89);
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+#loginbtn:hover{
+  background: rgba(16, 18, 99, 0.89);
+}
+h2{
+  text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #000;
+    text-transform: capitalize;
+}
+label{
+  font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: relative;
+    color: #000;
+    text-transform: capitalize;
+    top: 99px;
+}
+a{
+  text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: rgba(253, 8, 171, 0.89);
+    text-transform: capitalize;
+}
+a:hover{
+  color: rgba(16, 18, 99, 0.89);
+}
+#form3{
+  width: 30%;
+    height: 60%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px gray;
+    padding: 20px;
+}

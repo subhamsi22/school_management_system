@@ -1,0 +1,277 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f4f4;
+}
+
+.admin-container{
+  display:flex;
+}
+
+.sidebar{
+  width:220px;
+  height:100vh;
+  background:#1e1e2f;
+  color:#fff;
+  padding:20px;
+}
+
+.sidebar h2{
+  text-align:center;
+}
+
+.sidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.sidebar ul li{
+  transition: .3s;
+  padding:12px;
+  cursor:pointer;
+}
+
+.sidebar ul li:hover{
+  background:#333;
+}
+
+.main-content{
+  flex:1;
+  padding:20px;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+}
+
+ .card{
+  background:#fff;
+  padding:20px;
+  width:180px;
+  text-align:center;
+  border-radius:8px;
+  box-shadow:0 010px rgba(0,0,0,0.1);
+}
+
+.card span{
+  font-size:28px;
+  color:#3f51b5;
+}
+.main_c2{
+  display: none;
+}
+#form1{
+   margin: 20px;
+    flex-shrink: 1;
+    width: 171px;
+    height: 300px;
+    position: relative;
+    top: 31%;
+    border-radius: 16px;
+    left: -184%;
+    
+    box-shadow: inset 18px -20px 20px 20px #d5d5d5;
+    padding: 15px;
+    background: #f9eded;
+}
+label{
+    text-transform: capitalize;
+    font-size: 12px;
+}
+#inputt{
+    border: transparent;
+    border-radius: 4px;
+    height: 24px;
+}
+#sub{
+    border: transparent;
+    border-radius: 5px;
+    height: 22px;
+    margin: 7px;
+    text-align: center;
+    text-transform: capitalize;
+}
+body{
+  filter: drop-shadow(2px 2px 10px black);
+}
+
+
+.slidebutton{
+  width: 62px;
+    height: 30px;
+    background: #ebe5e5;
+    position: absolute;
+    top: 17%;
+    border-radius: 31px;
+    left: 94%;
+}
+.ball{
+  width: 26px;
+    height: 26px;
+    background: #7c7c7c;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+.cardd{
+  
+  background: #39748b;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: inset -3px -3px 14px 0px;
+
+}
+.dataaa{
+  width: 100%;
+    border-radius: 8px 7px  0px 0px;
+    height: 100%;
+    border: transparent;
+    background: #ffffff;
+}
+#spd{
+  color: #ffffff;
+}
+
+.dataaaa{
+  width: 100%;
+    border-radius: 8px 7px  0px 0px;
+    height: 100%;
+    border: transparent;
+    background: #ffffff;
+}
+#d{
+  font-size: 20px;
+}
+.main_content2{
+  display: none;  
+}
+#stud{
+  font-size: 148%;
+    margin: 30%;
+    text-transform: capitalize;
+    color: #121212;
+    background: #fff;
+    padding: 20px;
+    display: ruby-text;
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 010px rgba(0, 0, 0, 0.1);
+}
+table{
+  width: 64%;
+    position: absolute;
+    border-collapse: collapse;
+    left: 26%;
+}
+td{
+  width: 27%;
+    text-align: center;
+}
+th,td{
+  border: 1px solid #ddd;
+    padding: 8px;
+}
+th{
+  background-color: #f2f2f2;
+    text-align: center;
+}
+tr:hover{
+  background-color: #f1f1f1;
+}
+#jst{
+  display: none;
+}
+#jst2{
+  display: none;
+}
+.time-table{
+  position: absolute;
+    width: 30%;
+    height: 47%;
+    text-align: center;
+    background: #fff0f0;
+    top: 32%;
+    border-radius: 33px;
+
+    left: 61%;
+
+}
+#timeh1{
+  font-size: 14px;
+    font-weight: 300;
+    background: #3c92a1;
+    padding: 30px;
+    color: #fff;
+    width: 62px;
+    border-radius: 30px;
+    margin-left: 8px;
+    border: transparent;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+}
+#timeh2{
+  font-size: 14px;
+    font-weight: 300;
+    background: #3c92a1;
+    padding: 30px;
+    color: #fff;
+    width: 62px;
+    border-radius: 30px;
+    margin-left: 138px;
+    border: transparent;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    position: relative;
+    top: -34%;
+
+}
+
+#timeh3{
+  font-size: 14px;
+    font-weight: 300;
+    background: #3c92a1;
+    padding: 30px;
+    color: #fff;
+    width: 62px;
+    border-radius: 30px;
+    margin-left: 268px;
+    border: transparent;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    position: relative;
+    top: -67%;
+
+}
+#timeh5{
+font-size: 24px;
+    font-weight: 300;
+    padding: 30px;
+    color: #000000;
+    text-transform: capitalize;
+    width: 185px;
+    margin-left: 83px;
+    border: transparent;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    position: relative;
+    top: -67%;
+}
+#delet{
+ background: #ff4d4d;
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    margin: 39px;
+    width: 14%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+}
