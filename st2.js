@@ -1,16 +1,19 @@
 var mainc2 = document.querySelector(".main_c2");
 var ball  = document.querySelector(".ball");
+var deletbut = document.querySelector(".deletbut");
+
 ball.addEventListener("click",()=>{
    
     if(ball.style.transform == "translateX(30px)"){
         ball.style.transform = "translateX(0px)";
         mainc2.style.display = "none";
+        deletbut.style.display = "block";
     }
     else{
 
          ball.style.transform = "translateX(30px)";
     mainc2.style.display = "flex";
-
+deletbut.style.display = "none";
     }
 })
 
@@ -32,7 +35,6 @@ var upp2 = typeof ph2 !=='undefined' ? ph2 : [];
         height: `${t2}%`,
         duration:1.5,
         ease:"power2.out"})
-
 var main_content = document.querySelector(".main-content");
 var main_content2 = document.querySelector(".main_content2");
         var u = document.getElementById("u");
@@ -129,6 +131,8 @@ else{
 var  delet = document.getElementById("delet");
 delet.addEventListener("click",()=>{
     if(confirm("are you sure you want to delete all student data?")){
+        window.location.href = "delete.php";
+
         return true;
     }      
     else{
