@@ -340,3 +340,15 @@ background: #4dabff;
     left: 39%;
     top: 51%;
 }
+#op{
+  width: 2px;
+    height: 100%;
+    background: #857e7e;
+    top: 0%;
+    position: absolute;
+    left: 55.3%;
+}
+.mainforexam{
+ 
+    display: none;
+}

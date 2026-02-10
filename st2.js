@@ -1,6 +1,7 @@
 var mainc2 = document.querySelector(".main_c2");
 var ball  = document.querySelector(".ball");
 var deletbut = document.querySelector(".deletbut");
+var op = document.getElementById("op");
 
 ball.addEventListener("click",()=>{
    
@@ -8,12 +9,14 @@ ball.addEventListener("click",()=>{
         ball.style.transform = "translateX(0px)";
         mainc2.style.display = "none";
         deletbut.style.display = "block";
+        op.style.display = "block";
     }
     else{
 
          ball.style.transform = "translateX(30px)";
     mainc2.style.display = "flex";
 deletbut.style.display = "none";
+op.style.display = "none";
     }
 })
 
@@ -37,34 +40,88 @@ var upp2 = typeof ph2 !=='undefined' ? ph2 : [];
         ease:"power2.out"})
 var main_content = document.querySelector(".main-content");
 var main_content2 = document.querySelector(".main_content2");
+var mainforexam = document.querySelector(".mainforexam");
         var u = document.getElementById("u");
         var d = document.getElementById("d");
         var e = document.getElementById("e");
+       var r = document.getElementById("r");
+       var s = document.getElementById("s");
+       var l = document.getElementById("l");
+       
+       
         d.addEventListener("click",()=>{
             d.style.fontSize = "20px";
             u.style.fontSize = "17px";
             e.style.fontSize = "17px";
+            r.style.fontSize = "17px";
+            s.style.fontSize = "17px";
+            l.style.fontSize = "17px";
 main_content.style.display = "block";
             main_content2.style.display = "none";
+            mainforexam.style.display = "none";
         })
 
  u.addEventListener("click",()=>{
             d.style.fontSize = "17px";
             u.style.fontSize = "20px";
             e.style.fontSize = "17px";
+            r.style.fontSize = "17px";
+            s.style.fontSize = "17px";
+            l.style.fontSize = "17px";
             main_content.style.display = "none";
             main_content2.style.display = "block";
+                mainforexam.style.display = "none";
 
         })
     e.addEventListener("click",()=>{
             d.style.fontSize = "17px";
             u.style.fontSize = "17px";
             e.style.fontSize = "20px";
+            r.style.fontSize = "17px";
+            s.style.fontSize = "17px";
+            l.style.fontSize = "17px";
 
                     main_content.style.display = "none";
             main_content2.style.display = "none";
+            mainforexam.style.display = "block";
 
     })
+    r.addEventListener("click",()=>{
+            d.style.fontSize = "17px";
+            u.style.fontSize = "17px";
+            e.style.fontSize = "17px";
+            r.style.fontSize = "20px";
+            s.style.fontSize = "17px";
+        l.style.fontSize = "17px";
+                    main_content.style.display = "none";
+            main_content2.style.display = "none";   
+                mainforexam.style.display = "none";
+    })
+    s.addEventListener("click",()=>{
+            d.style.fontSize = "17px";
+            u.style.fontSize = "17px";
+            e.style.fontSize = "17px";
+            r.style.fontSize = "17px";
+            s.style.fontSize = "20px";
+        l.style.fontSize = "17px";
+                    main_content.style.display = "none";
+            main_content2.style.display = "none";   
+                mainforexam.style.display = "none";
+    }   
+    )
+    l.addEventListener("click",()=>{
+            d.style.fontSize = "17px";
+            u.style.fontSize = "17px";      
+            e.style.fontSize = "17px";
+            r.style.fontSize = "17px";
+            s.style.fontSize = "17px";
+            l.style.fontSize = "20px";
+                    main_content.style.display = "none";
+            main_content2.style.display = "none";   
+                mainforexam.style.display = "none";
+    }
+    )
+    
 
 
 
@@ -139,3 +196,21 @@ delet.addEventListener("click",()=>{
         return false;
     }
 });
+
+
+var tech = document.querySelector(".tech");
+tech.addEventListener("click",()=>{
+    if(confirm("are you sure you want to delete this teacher data?")){
+        
+        
+        
+        window.location.href = "deletetech.php";
+        
+        
+        return true;    
+
+    }
+    else{
+        return false;
+    }   
+})

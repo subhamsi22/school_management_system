@@ -27,9 +27,9 @@ if (!isset($_SESSION['admin'])) {
       <li id="d">Dashboard</li>
       <li id="u">Users</li>
       <li id="e">Exams</li>
-      <li>Results</li>
-      <li>Settings</li>
-      <li>Logout</li>
+      <li id="r">Results</li>
+      <li id="s">Settings</li>
+      <li id="l">Logout</li>
     </ul>
   </div>
 
@@ -113,12 +113,11 @@ else{
 
 <!-- techer manipultion -->
  
-<form action="deletetech.php" method="post">
 
-  <button id="deletbut" >  click here to delete teacher data</button>
+  <button class="tech" id="deletbut" >  click here to delete teacher data</button>
 
 
-</form>
+
 <form action="iddeletetech.php" method = "post">
 
 <input type="number" placeholder="enter id to delete" name="id" id="inputtidtech" required>
@@ -126,6 +125,7 @@ else{
 
 </form>
 </div>
+<hr id="op">
 
 
 </div>
@@ -270,8 +270,60 @@ mysqli_close($conn2);
 
         </table>
   </div>
+</div>
 
 </div>
+<!-- INSERT INTO `exam` (`id`, `question_1`, `question_2`, `question_3`, `question_4`, `question_5`, `question_6`, `question_7`, `question_8`, `question_19`, `question_10`)
+  VALUES ('1', 'POIPP', 'IOPPI', 'PIPO', 'OP', 'PIOPIOP', 'IOPIP', 'IPOIPI', 'IPOOIP', 'IOPPIOP', 'IOP'); -->
+<div class="mainforexam">
+<h1 class="hg">crate a 2 * 10 =20 exams paper hear </h1>
+<form action="exam.php" method="POST">
+<fieldset>
+  <label for="question_1"> question_1</label>
+  <input type="text" name='question_1' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_2"> question_2</label>
+  <input type="text" name='question_2' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_3"> question_3</label>
+  <input type="text" name='question_3' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_4"> question_4</label>
+  <input type="text" name='question_4' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_5"> question_5</label>
+  <input type="text" name='question_5' id="inputt" required>
+  <br>
+  <br>
+    <label for="question_6"> question_5</label>
+
+  <input type="text" name='question_6' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_7"> question_7</label>
+  <input type="text" name='question_7' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_8"> question_8</label>
+  <input type="text" name='question_8' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_9"> question_9</label>
+  <input type="text" name='question_9' id="inputt" required>
+  <br>
+  <br>
+  <label for="question_10"> question_10</label>
+  <input type="text" name='question_10' id="inputt" required>
+  <br>
+  <br>
+  <input id="sub" type="submit" value="create exam">
+</fieldset>
+
+</form>
 </div>
 
 
