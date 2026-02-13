@@ -14,7 +14,7 @@ $question_7 = $_POST['question_7'];
 $question_8 = $_POST['question_8'];
 $question_9 = $_POST['question_9'];
 $question_10 = $_POST['question_10'];
-$sql = "INSERT INTO `exam` ( `question_1`, `question_2`, `question_3`, `question_4`, `question_5`, `question_6`, `question_7`, `question_8`, `question_19`, `question_10`) 
+$sql = "INSERT INTO `exam` ( `question_1`, `question_2`, `question_3`, `question_4`, `question_5`, `question_6`, `question_7`, `question_8`, `question_9`, `question_10`) 
 VALUES ('$question_1', '$question_2', '$question_3', '$question_4', '$question_5', '$question_6', '$question_7', '$question_8', '$question_9', '$question_10')";
 if(mysqli_query($conn,$sql)){
     echo "New record created successfully";
