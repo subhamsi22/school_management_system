@@ -1,354 +1,479 @@
-body{
-  margin:0;
+/* ==================== Global Styles ==================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#f4f4f4;
-}
-
-.admin-container{
-  display:flex;
-}
-
-.sidebar{
-  width:220px;
-  height:100vh;
-  background:#1e1e2f;
-  color:#fff;
-  padding:20px;
-}
-
-.sidebar h2{
-  text-align:center;
-}
-
-.sidebar ul{
-  list-style:none;
-  padding:0;
-}
-
-.sidebar ul li{
-  transition: .3s;
-  padding:12px;
-  cursor:pointer;
-}
-
-.sidebar ul li:hover{
-  background:#333;
-}
-
-.main-content{
-  flex:1;
-  padding:20px;
-}
-
-.cards{
-  display:flex;
-  gap:20px;
-}
-
- .card{
-  background:#fff;
-  padding:20px;
-  width:180px;
-  text-align:center;
-  border-radius:8px;
-  box-shadow:0 010px rgba(0,0,0,0.1);
-}
-
-.card span{
-  font-size:28px;
-  color:#3f51b5;
-}
-.main_c2{
-  display: none;
-}
-#form1{
-   margin: 20px;
-    flex-shrink: 1;
-    width: 171px;
-    height: 300px;
-    position: relative;
-    top: 31%;
-    border-radius: 16px;
-    left: -184%;
-    
-    box-shadow: inset 18px -20px 20px 20px #d5d5d5;
-    padding: 15px;
-    background: #f9eded;
-}
-label{
-    text-transform: capitalize;
-    font-size: 12px;
-}
-#inputt{
-    border: transparent;
-    border-radius: 4px;
-    height: 24px;
-}
-#sub{
-    border: transparent;
-    border-radius: 5px;
-    height: 22px;
-    margin: 7px;
-    text-align: center;
-    text-transform: capitalize;
-}
-body{
+  background: #f4f4f4;
   filter: drop-shadow(2px 2px 10px black);
 }
 
+/* ==================== Layout ==================== */
+.admin-container {
+  display: flex;
+}
 
-.slidebutton{
-  width: 62px;
-    height: 30px;
-    background: #ebe5e5;
-    position: absolute;
-    top: 17%;
-    border-radius: 31px;
-    left: 94%;
+/* ==================== Sidebar ==================== */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 20px;
 }
-.ball{
-  width: 26px;
-    height: 26px;
-    background: #7c7c7c;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: all 0.3s ease;
+
+.sidebar h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
 }
-.cardd{
-  
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.sidebar ul li:hover {
+  background: #333;
+}
+
+/* ==================== Main Content Area ==================== */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content h1 {
+  color: #333;
+  margin-top: 0;
+}
+
+/* ==================== Dashboard Cards ==================== */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card span {
+  font-size: 28px;
+  color: #3f51b5;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ==================== Graph Cards ==================== */
+.cardd {
   background: #39748b;
-    width: 180px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: inset -3px -3px 14px 0px;
-
-}
-.dataaa{
-  width: 100%;
-    border-radius: 8px 7px  0px 0px;
-    height: 100%;
-    border: transparent;
-    background: #ffffff;
-}
-#spd{
-  color: #ffffff;
+  width: 180px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: inset -3px -3px 14px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.dataaaa{
+.dataaa,
+.dataaaa {
   width: 100%;
-    border-radius: 8px 7px  0px 0px;
-    height: 100%;
-    border: transparent;
-    background: #ffffff;
+  height: 100%;
+  border-radius: 8px 7px 0px 0px;
+  border: none;
+  background: #ffffff;
 }
-#d{
-  font-size: 20px;
-}
-.main_content2{
-  display: none;  
-}
-#stud{
-  font-size: 148%;
-    margin: 30%;
-    text-transform: capitalize;
-    color: #121212;
-    background: #fff;
-    padding: 20px;
-    display: ruby-text;
-    width: 180px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 010px rgba(0, 0, 0, 0.1);
-}
-table{
-  width: 64%;
-    position: absolute;
-    border-collapse: collapse;
-    left: 26%;
-}
-td{
-  width: 27%;
-    text-align: center;
-}
-th,td{
-  border: 1px solid #ddd;
-    padding: 8px;
-}
-th{
-  background-color: #f2f2f2;
-    text-align: center;
-}
-tr:hover{
-  background-color: #f1f1f1;
-}
-#jst{
-  display: none;
-}
-#jst2{
-  display: none;
-}
-.time-table{
+
+/* ==================== Time Table ==================== */
+.time-table {
   position: absolute;
-    width: 30%;
-    height: 47%;
-    text-align: center;
-    background: #fff0f0;
-    top: 32%;
-    border-radius: 33px;
-
-    left: 61%;
-
+  width: 30%;
+  height: 47%;
+  top: 32%;
+  left: 49%;
+  text-align: center;
+  background: #fff0f0;
+  border-radius: 33px;
+  padding: 20px;
 }
+
+.time-table h1 {
+  margin-top: 0;
+}
+
 #timeh1{
   font-size: 14px;
     font-weight: 300;
     background: #3c92a1;
-    padding: 30px;
     color: #fff;
-    width: 62px;
+    width: 95px;
+    position: relative;
+    height: 62px;
+    padding: 23px;
     border-radius: 30px;
-    margin-left: 8px;
-    border: transparent;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    gap: 60px;
+    display: flex;
 }
 #timeh2{
   font-size: 14px;
     font-weight: 300;
     background: #3c92a1;
-    padding: 30px;
     color: #fff;
-    width: 62px;
-    border-radius: 30px;
-    margin-left: 138px;
-    border: transparent;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    width: 95px;
     position: relative;
-    top: -34%;
-
+    height: 62px;
+    top: -42%;
+    padding: 23px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    gap: 60px;
+    display: flex;
+    left: 32%;
 }
-
-#timeh3{
-  font-size: 14px;
+#timeh3 {
+ font-size: 14px;
     font-weight: 300;
     background: #3c92a1;
-    padding: 30px;
     color: #fff;
-    width: 62px;
-    border-radius: 30px;
-    margin-left: 268px;
-    border: transparent;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    width: 95px;
     position: relative;
-    top: -67%;
-
+    height: 62px;
+    top: -84%;
+    padding: 23px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    gap: 60px;
+    display: flex;
+    left: 67%;
 }
-#timeh5{
-font-size: 24px;
+
+#timeh5 {
+  font-size: 24px;
     font-weight: 300;
-    padding: 30px;
     color: #000000;
     text-transform: capitalize;
-    width: 185px;
-    margin-left: 83px;
-    border: transparent;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    padding: 20px;
     position: relative;
-    top: -67%;
+    margin: 7px 0;
+    top: -91%;
 }
-#delet{
- background: #ff4d4d;
-    color: #fff;
-    border: transparent;
-    border-radius: 5px;
-    margin: 39px;
-    width: 14%;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-weight: 500;
-}
-#delett{
-background: #4dabff;
-    color: #fff;
-    border: transparent;
-    border-radius: 5px;
-    margin: 39px;
-    position: relative;
-    width: 10%;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-weight: 500;
-    left: 1%;
-    margin-top: 34px;
-    display: flex;
-}
-#inputtid{
-  text-transform: capitalize;
-    width: 12%;
-    margin-left: 40px;
-    border: 5px solid #4dabff;
 
+/* ==================== Forms ==================== */
+.main_c2 {
+  display: none;
 }
-#deletbut{
- background: #ff4d4d;
+
+#form1 {
+  position: relative;
+    top: 30%;
+    left: -167%;
+    width: 171px;
+    height: 300px;
+    margin: 20px;
+    padding: 15px;
+    background: #f9eded;
+    border-radius: 16px;
+    box-shadow: inset 18px -20px 20px 20px #d5d5d5;
+    overflow-y: auto;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 12px;
+  color: #333;
+  margin-top: 8px;
+}
+
+#inputt {
+  width: 90%;
+  height: 24px;
+  margin: 8px 0;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+}
+
+#sub {
+  width: 90%;
+  height: 22px;
+  margin: 7px auto;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #4dabff;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#sub:hover {
+  background: #357abd;
+}
+
+/* ==================== Buttons ==================== */
+button {
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn-primary {
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.delete-btn-primary:hover {
+  background: #e60000;
+}
+
+.submit-btn-secondary {
+  background: #4dabff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.submit-btn-secondary:hover {
+  background: #2b7fc9;
+}
+
+#delet {
+width: 14%;
+    margin: 14px;
+    background: #ff4d4d;
     color: #fff;
-    border: transparent;
     border-radius: 5px;
-    margin: 39px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#delett {
+position: absolute;
+    left: 16%;
+    width: 10%;
+    top: 58%;
+    margin: 35px 45px;
+    background: #4dabff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#inputtid {
+ width: 12%;
+    margin-left: 27px;
+    padding: 8px;
+    border: 5px solid #4dabff;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+#deletbut {
+ position: absolute;
+    top: 31%;
+    left: 31%;
     width: 11%;
     padding: 10px 20px;
+    margin: 39px;
+    background: #ff4d4d;
+    color: #fff;
+    border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-weight: 500;
-    position: absolute;
-    top: 26%;
-    left: 38%;
 }
-#inputtidtech{
- text-transform: capitalize;
+
+#inputtidtech {
+ position: absolute;
+    top: 53%;
+    left: 32%;
     width: 9%;
     margin-left: 40px;
+    padding: 8px;
     border: 5px solid #4dabff;
-    position: absolute;
-    top: 47%;
-    left: 38%;
+    border-radius: 4px;
+    text-transform: capitalize;
 }
-#deletttech{
- background: #4dabff;
-    color: #fff;
-    border: transparent;
-    border-radius: 5px;
-    margin: 39px;
-    position: absolute;
+
+#deletttech {
+position: absolute;
+    top: 57%;
+    left: 32%;
     width: 8%;
     padding: 10px 20px;
+    margin: 39px;
+    background: #4dabff;
+    color: #fff;
+    border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-weight: 500;
-    left: 39%;
-    top: 51%;
 }
-#op{
+
+/* ==================== Toggle Switch ==================== */
+.slidebutton {
+  position: absolute;
+  top: 17%;
+  left: 94%;
+  width: 62px;
+  height: 30px;
+  background: #ebe5e5;
+  border-radius: 31px;
+  cursor: pointer;
+}
+
+.ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background: #7c7c7c;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* ==================== Divider ==================== */
+#op {
+  position: absolute;
+  top: 0;
+  left: 55.3%;
   width: 2px;
-    height: 100%;
-    background: #857e7e;
-    top: 0%;
-    position: absolute;
-    left: 55.3%;
+  height: 100%;
+  background: #857e7e;
 }
-.mainforexam{
- 
-    display: none;
+
+/* ==================== Users/Tables Content ==================== */
+.main_content2 {
+  display: none;
+}
+
+#stud {
+  display: table;
+  width: 180px;
+  margin: 30%;
+  padding: 20px;
+  background: #fff;
+  color: #121212;
+  font-size: 148%;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#stud:hover {
+  background: #f0f0f0;
+}
+
+/* ==================== Tables ==================== */
+table {
+  position: absolute;
+  left: 26%;
+  width: 64%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+  font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+td {
+  width: 27%;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+#jst,
+#jst2 {
+  display: none;
+}
+
+/* ==================== Exam Section ==================== */
+.mainforexam {
+  display: none;
+}
+
+.mainforexam h1 {
+  margin: 20px;
+  color: #333;
+}
+
+.mainforexam fieldset {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.mainforexam fieldset legend {
+  font-weight: bold;
+  color: #333;
+}
+
+#exm {
+  position: relative;
+  top: -7%;
+  left: 78%;
+  height: 30px;
+  border-radius: 7px;
+  padding: 8px 16px;
+  background: #4dabff;
+  color: white;
+  text-transform: capitalize;
+  display: none;
+}
+
+#exm:hover {
+  background: #2b7fc9;
 }

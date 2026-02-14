@@ -1,216 +1,148 @@
-var mainc2 = document.querySelector(".main_c2");
-var ball  = document.querySelector(".ball");
-var deletbut = document.querySelector(".deletbut");
-var op = document.getElementById("op");
+// ==================== DOM Elements ====================
+const mainContainer = document.querySelector(".main_c2");
+const toggleBall = document.querySelector(".ball");
+const deleteSection = document.querySelector(".deletbut");
+const divider = document.getElementById("op");
 
-ball.addEventListener("click",()=>{
-   
-    if(ball.style.transform == "translateX(30px)"){
-        ball.style.transform = "translateX(0px)";
-        mainc2.style.display = "none";
-        deletbut.style.display = "block";
-        op.style.display = "block";
-    }
-    else{
+const mainContent = document.querySelector(".main-content");
+const usersContent = document.querySelector(".main_content2");
+const examContent = document.querySelector(".mainforexam");
 
-         ball.style.transform = "translateX(30px)";
-    mainc2.style.display = "flex";
-deletbut.style.display = "none";
-op.style.display = "none";
-    }
-})
+// Navigation items
+const navItems = {
+  dashboard: document.getElementById("d"),
+  users: document.getElementById("u"),
+  exams: document.getElementById("e"),
+  results: document.getElementById("r"),
+  settings: document.getElementById("s"),
+  logout: document.getElementById("l")
+};
 
-var upp = typeof phpdata !=='undefined' ? phpdata : [];
+// Data visualization elements
+const studentGraph = document.querySelector(".dataaa");
+const teacherGraph = document.querySelector(".dataaaa");
 
-var dataaa = document.querySelector(".dataaa");
- let total = upp *2;
-    let t = 100-total;
-     // dataaa.style.height = `${t}%`;
-    gsap.to(dataaa,{
-        height: `${t}%`,
-        duration:1.5,
-        ease:"power2.out"})
-var dataaaa = document.querySelector(".dataaaa");
-var upp2 = typeof ph2 !=='undefined' ? ph2 : [];
- let total2 = upp2 *2;
-    let t2 = 100-total2;
-    gsap.to(dataaaa,{
-        height: `${t2}%`,
-        duration:1.5,
-        ease:"power2.out"})
-var main_content = document.querySelector(".main-content");
-var main_content2 = document.querySelector(".main_content2");
-var mainforexam = document.querySelector(".mainforexam");
-        var u = document.getElementById("u");
-        var d = document.getElementById("d");
-        var e = document.getElementById("e");
-       var r = document.getElementById("r");
-       var s = document.getElementById("s");
-       var l = document.getElementById("l");
-       
-       
-        d.addEventListener("click",()=>{
-            d.style.fontSize = "20px";
-            u.style.fontSize = "17px";
-            e.style.fontSize = "17px";
-            r.style.fontSize = "17px";
-            s.style.fontSize = "17px";
-            l.style.fontSize = "17px";
-main_content.style.display = "block";
-            main_content2.style.display = "none";
-            mainforexam.style.display = "none";
-        })
+// Table elements
+const studentTable = document.getElementById("jst");
+const studentHeader = document.querySelector(".hg");
+const teacherTable = document.getElementById("jst2");
+const teacherHeader = document.querySelector(".hg2");
 
- u.addEventListener("click",()=>{
-            d.style.fontSize = "17px";
-            u.style.fontSize = "20px";
-            e.style.fontSize = "17px";
-            r.style.fontSize = "17px";
-            s.style.fontSize = "17px";
-            l.style.fontSize = "17px";
-            main_content.style.display = "none";
-            main_content2.style.display = "block";
-                mainforexam.style.display = "none";
+// Delete buttons
+const deleteStudentBtn = document.getElementById("delet");
+const deleteTeacherBtn = document.querySelector(".tech");
 
-        })
-    e.addEventListener("click",()=>{
-            d.style.fontSize = "17px";
-            u.style.fontSize = "17px";
-            e.style.fontSize = "20px";
-            r.style.fontSize = "17px";
-            s.style.fontSize = "17px";
-            l.style.fontSize = "17px";
+// Form button
+const submitBtn = document.getElementById("sub");
+const examBtn = document.getElementById("exm");
 
-                    main_content.style.display = "none";
-            main_content2.style.display = "none";
-            mainforexam.style.display = "block";
+// ==================== Constants ====================
+const ACTIVE_FONT_SIZE = "20px";
+const INACTIVE_FONT_SIZE = "17px";
+const ANIMATION_DURATION = 1;
+const ANIMATION_EASE = "power2.out";
 
-    })
-    r.addEventListener("click",()=>{
-            d.style.fontSize = "17px";
-            u.style.fontSize = "17px";
-            e.style.fontSize = "17px";
-            r.style.fontSize = "20px";
-            s.style.fontSize = "17px";
-        l.style.fontSize = "17px";
-                    main_content.style.display = "none";
-            main_content2.style.display = "none";   
-                mainforexam.style.display = "none";
-    })
-    s.addEventListener("click",()=>{
-            d.style.fontSize = "17px";
-            u.style.fontSize = "17px";
-            e.style.fontSize = "17px";
-            r.style.fontSize = "17px";
-            s.style.fontSize = "20px";
-        l.style.fontSize = "17px";
-                    main_content.style.display = "none";
-            main_content2.style.display = "none";   
-                mainforexam.style.display = "none";
-    }   
-    )
-    l.addEventListener("click",()=>{
-            d.style.fontSize = "17px";
-            u.style.fontSize = "17px";      
-            e.style.fontSize = "17px";
-            r.style.fontSize = "17px";
-            s.style.fontSize = "17px";
-            l.style.fontSize = "20px";
-                    main_content.style.display = "none";
-            main_content2.style.display = "none";   
-                mainforexam.style.display = "none";
-    }
-    )
+// ==================== Toggle Add Form ====================
+toggleBall.addEventListener("click", () => {
+  const isOpen = toggleBall.style.transform === "translateX(30px)";
+  
+  if (isOpen) {
+    toggleBall.style.transform = "translateX(0px)";
+    mainContainer.style.display = "none";
+    deleteSection.style.display = "block";
+    divider.style.display = "block";
+  } else {
+    toggleBall.style.transform = "translateX(30px)";
+    mainContainer.style.display = "flex";
+    deleteSection.style.display = "none";
+    divider.style.display = "none";
+  }
+});
+
+// ==================== Data Visualization ====================
+function animateGraph(element, dataValue) {
+  const total = dataValue * 2;
+  const height = 100 - total;
+  
+  gsap.to(element, {
+    height: `${height}%`,
+    duration: ANIMATION_DURATION + 0.5,
+    ease: ANIMATION_EASE
+  });
+}
+
+const studentData = typeof phpdata !== 'undefined' ? phpdata : [];
+animateGraph(studentGraph, studentData);
+
+const teacherData = typeof ph2 !== 'undefined' ? ph2 : [];
+animateGraph(teacherGraph, teacherData);
+
+// ==================== Navigation ====================
+const navigationMap = [
+  { id: navItems.dashboard, section: mainContent, others: [usersContent, examContent] },
+  { id: navItems.users, section: usersContent, others: [mainContent, examContent] },
+  { id: navItems.exams, section: examContent, others: [mainContent, usersContent] },
+  { id: navItems.results, section: null, others: [mainContent, usersContent, examContent] },
+  { id: navItems.settings, section: null, others: [mainContent, usersContent, examContent] },
+  { id: navItems.logout, section: null, others: [mainContent, usersContent, examContent] }
+];
+
+navigationMap.forEach(nav => {
+  nav.id.addEventListener("click", () => {
+    // Update font sizes
+    Object.values(navItems).forEach(item => {
+      item.style.fontSize = INACTIVE_FONT_SIZE;
+    });
+    nav.id.style.fontSize = ACTIVE_FONT_SIZE;
     
-
-
-
-    var jst = document.getElementById("jst");
-var hg = document.querySelector(".hg");
-hg.addEventListener("click",()=>{
-
-if(jst.style.display == "block"){
-    gsap.to(jst,{
-        x:0,
-        duration:1,
-        ease:"power2.out",});
-    jst.style.display = "none";
-    hg.style.backgroundColor = "#fff";
-    return;
-}
-else{
-
-
-    gsap.to(jst,{
-        x:40,
-        duration:1,
-        ease:"power2.out"
-    });
-    jst.style.display = "block";
-    // jst.style.marginLeft = "30px";
-    hg.style.backgroundColor = "lightblue";
-    jst2.style.display = "none";
-        hg2.style.backgroundColor = "#fff";
-
-
-}
-});
-
-
-var hg2 = document.querySelector(".hg2");
-var jst2 = document.getElementById("jst2");
-hg2.addEventListener("click",()=>{  
-if(jst2.style.display == "block"){
-    gsap.to(jst2,{
-        x:0,
-        duration:1,
-        ease:"power2.out",});
-    jst2.style.display = "none";
-        
-    hg2.style.backgroundColor = "#fff";
-    return;
-}
-else{
-    gsap.to(jst2,{
-        x:40,
-        duration:1,
-        ease:"power2.out"
-    });
-    jst2.style.display = "block";
-    jst.style.display = "none";
-    // jst2.style.marginLeft = "30px";
-        hg.style.backgroundColor = "#fff";
-
-    hg2.style.backgroundColor = "lightblue";
-}
-});
-
-var  delet = document.getElementById("delet");
-delet.addEventListener("click",()=>{
-    if(confirm("are you sure you want to delete all student data?")){
-        window.location.href = "delete.php";
-
-        return true;
-    }      
-    else{
-        return false;
+    // Show/hide sections
+    if (nav.section) {
+      nav.section.style.display = "block";
     }
+    nav.others.forEach(section => {
+      section.style.display = "none";
+    });
+  });
 });
 
-
-var tech = document.querySelector(".tech");
-tech.addEventListener("click",()=>{
-    if(confirm("are you sure you want to delete this teacher data?")){
-        
-        
-        
-        window.location.href = "deletetech.php";
-        
-        
-        return true;    
-
+// ==================== Table Toggle ====================
+function createTableToggle(header, table, otherTable, otherHeader) {
+  header.addEventListener("click", () => {
+    const isVisible = table.style.display === "block";
+    
+    if (isVisible) {
+      gsap.to(table, { x: 0, duration: ANIMATION_DURATION, ease: ANIMATION_EASE });
+      table.style.display = "none";
+      header.style.backgroundColor = "#fff";
+    } else {
+      gsap.to(table, { x: 40, duration: ANIMATION_DURATION, ease: ANIMATION_EASE });
+      table.style.display = "block";
+      header.style.backgroundColor = "lightblue";
+      
+      // Hide the other table
+      otherTable.style.display = "none";
+      otherHeader.style.backgroundColor = "#fff";
     }
-    else{
-        return false;
-    }   
-})
+  });
+}
+
+createTableToggle(studentHeader, studentTable, teacherTable, teacherHeader);
+createTableToggle(teacherHeader, teacherTable, studentTable, studentHeader);
+
+// ==================== Delete Buttons ====================
+deleteStudentBtn.addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete all student data?")) {
+    window.location.href = "delete.php";
+  }
+});
+
+deleteTeacherBtn.addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete this teacher data?")) {
+    window.location.href = "deletetech.php";
+  }
+});
+
+// ==================== Form Submission ====================
+submitBtn.addEventListener("click", () => {
+  examBtn.style.display = "block";
+});

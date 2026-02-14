@@ -10,6 +10,16 @@
     text-align: center;
     text-transform: capitalize;
         }
+        #hh{
+            display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    height: 32px;
+    text-transform: capitalize;
+    width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +40,7 @@ if(mysqli_num_rows($result)> 0){
     while($row =  mysqli_fetch_assoc($result)){
 for($i =1;$i<=10;$i++){
         echo "<h1>$i qusiton is: " . $row["question_$i"] ."</h1>";
+        echo "<input type='text' name='answer_$i' id='hh' placeholder='enter the answer hear'>";
 
 }
     }

@@ -125,7 +125,6 @@ else{
 
 </form>
 </div>
-<hr id="op">
 
 
 </div>
@@ -322,8 +321,9 @@ mysqli_close($conn2);
   <br>
   <input id="sub" type="submit" value="create exam">
 </fieldset>
-
 </form>
+<button id="exm">click hear</button>
+
 </div>
 
 
