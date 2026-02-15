@@ -322,7 +322,7 @@ mysqli_close($conn2);
   <input id="sub" type="submit" value="create exam">
 </fieldset>
 </form>
-<button id="exm">click hear</button>
+<a href="exam_question.php"><button id="exm">click hear</button></a>
 
 </div>
 

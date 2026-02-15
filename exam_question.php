@@ -20,31 +20,46 @@
     text-transform: capitalize;
     width: 100%;
         }
+        .question{
+          background: #fff0f0;
+    height: 114px;
+    width: 79%;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    left: 14%;
+    border-left: 2px solid blue;
+        }   
     </style>
 </head>
 <body>
+
+
+
+
+
     <h1>
         welcome to your exam 
     </h1>
     <p>each questions conatin 2 marks </p>
     <p> 2 * 10 = 20</p>
+<label for="">student name</label>
 
 <?php
-$conn    = mysqli_connect("localhost","root","","school");
-if(!$conn){
-    die("not reached to the databse".mysqli_connect_error());
-}
-$sql = "SELECT *  FROM exam";
-$result = mysqli_query($conn,$sql);
-if(mysqli_num_rows($result)> 0){
-    while($row =  mysqli_fetch_assoc($result)){
-for($i =1;$i<=10;$i++){
-        echo "<h1>$i qusiton is: " . $row["question_$i"] ."</h1>";
-        echo "<input type='text' name='answer_$i' id='hh' placeholder='enter the answer hear'>";
 
+echo "<form action='phptemp2.php' method='POST'>";    
+echo "<input type='text' name='student_id' id='student_name' placeholder='enter your name here' required>";
+
+for($i =1;$i<=10;$i++){
+    include "tempphp1.php";
+    echo "<div class='question'>";
+    echo "<h1>$i question is: " . $row["question_$i"] ."</h1>";
+    echo "<input type='text' name='answer_$i' id='hh' placeholder='enter the answer here'>";
+    echo "</div>";
 }
-    }
-}
+    
+echo "<div style='text-align:center;margin-top:20px;'><button type='submit'>submit</button></div>";
+echo "</form>";
 
 ?>
 

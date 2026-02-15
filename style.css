@@ -640,7 +640,7 @@ textarea{
     height: 20%;
     position: relative;
     left: 10%;
-    top: 30%;
+    /* top: 30%; */
     border-radius: 10px;
     border: 1px solid gray;
     padding: 10px;
@@ -650,7 +650,7 @@ textarea{
     height: 8%;
     position: relative;
     left: 35%;
-    top: 40%;
+    /* top: 40%; */
     border-radius: 10px;
     /* border: transparent; */
     background: rgba(253, 8, 171, 0.89);
@@ -660,7 +660,7 @@ textarea{
 }
 footer{
   width: 100%;
-    height: 30vh;
+    height: 41vh;
     background: #000000;
 }
 #footerh1{
@@ -754,4 +754,528 @@ a:hover{
     border-radius: 20px;
     box-shadow: 0px 0px 20px 5px gray;
     padding: 20px;
+}
+
+
+/* MOBILE RESPONSIVE STYLES */
+
+/* Tablets and Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .nav ul {
+    position: relative;
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav ul li {
+    margin: 12px;
+    font-size: 12px;
+  }
+
+  .nav ul li a {
+    font-size: 12px;
+  }
+
+  .text .hh1 {
+    font-size: 32px;
+    left: 15%;
+    top: 25%;
+  }
+
+  #p1, #p2, #p3 {
+    left: 50% !important;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: 14px;
+    top: -50%;
+    text-align: center;
+  }
+
+  #butt {
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: 55%;
+  }
+
+  .banner2 {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: auto;
+  }
+
+  .container {
+    height: auto;
+    top: 0;
+    overflow-x: auto;
+  }
+
+  .box {
+    width: 85%;
+    height: 50vh;
+    margin: 15px auto;
+    box-shadow: inset -6px -10px 20px 3px gray;
+  }
+
+  .boxes {
+    left: 50%;
+    bottom: 20px;
+  }
+
+  .banner3 {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .newbox {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .secondnewbx,
+  .secondnewbx2,
+  .secondnewbx3,
+  .secondnewbx4 {
+    width: 70%;
+    height: auto;
+    transform: none;
+    clip-path: none;
+    left: 50% !important;
+    margin: 20px auto;
+    top: 0 !important;
+    position: relative;
+    transform: translateX(-50%);
+    padding: 20px;
+  }
+
+  #b3h1, #b3h11, #h3h111, #h3h1111 {
+    transform: none;
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .img_class {
+    position: static;
+    top: auto;
+    left: auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .img_class img {
+    width: 60%;
+    height: auto;
+  }
+
+  .img_for_ui {
+    position: static;
+    width: 80%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+  .triangle {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    border-radius: 20px;
+  }
+
+  #newimg {
+    width: 60%;
+    position: static;
+    top: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+  #ggy {
+    position: static;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: 15px 0;
+  }
+
+  #banner3h1 {
+    position: relative;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 24px;
+    margin: 20px auto;
+  }
+
+  .d1, .d2, .d3, .d4 {
+    position: static;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  #d3h1, #d3h2, #d3h3, #d3h4 {
+    position: static;
+    width: 100%;
+    top: auto !important;
+    left: auto !important;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .banner4 {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #b4h1 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  #b4p1 {
+    width: 100%;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .firstboxb4 {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    left: 0;
+    padding: 20px;
+    position: relative;
+  }
+
+  #ii {
+    font-size: 50px;
+    position: static;
+    top: auto;
+    left: auto;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  #firstbox4p1 {
+    position: static;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .banner5 {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #b5h1 {
+    font-size: 24px;
+  }
+
+  #b5p1 {
+    width: 100%;
+    left: 0;
+    padding: 0 15px;
+  }
+
+  fieldset {
+    width: 95%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    padding: 20px;
+  }
+
+  input, textarea {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    top: 0;
+    margin: 15px 0;
+    height: auto;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  #btn {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    padding: 12px 20px;
+    margin-top: 15px;
+    position: relative;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px;
+  }
+
+  table, th, td {
+    padding: 12px;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+  }
+
+  table {
+    border: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    padding: 10px;
+    display: block;
+  }
+
+  td, th {
+    border: none;
+    display: block;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  #footerh1 {
+    font-size: 14px;
+  }
+
+  .bannerlogin {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #gh {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #form3 {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #loginbtn {
+    width: 80%;
+    height: auto;
+    padding: 12px 20px;
+    display: block;
+    margin: 20px auto;
+  }
+
+  label {
+    top: auto;
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .banner1, .banner2, .banner3, .banner4, .banner5 {
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .nav {
+    margin: 10px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav ul li {
+    margin: 8px;
+    display: block;
+  }
+
+  .nav ul li a {
+    font-size: 13px;
+  }
+
+  .text .hh1 {
+    font-size: 24px;
+    width: 100%;
+    left: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  #p1, #p2, #p3 {
+    font-size: 12px;
+    margin: 10px 0;
+    top: 0 !important;
+    position: relative;
+    left: 0 !important;
+    transform: none;
+  }
+
+  #butt {
+    width: 90%;
+    height: auto;
+    padding: 10px 20px;
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: auto;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  #img {
+    width: 50%;
+    height: auto;
+  }
+
+  .box {
+    width: 95%;
+    height: auto;
+    min-height: 300px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .w {
+    font-size: 18px;
+    margin: 15px 5px;
+  }
+
+  .boxes .b, .boxes .b2, .boxes .b3 {
+    width: 20px;
+    height: 20px;
+    left: 0 !important;
+    margin: 0 5px;
+  }
+
+  .newbox {
+    width: 60px;
+    height: 60px;
+  }
+
+  .secondnewbx,
+  .secondnewbx2,
+  .secondnewbx3,
+  .secondnewbx4 {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .banner3 {
+    background: linear-gradient(black, #ffffff2e);
+    background-attachment: fixed;
+  }
+
+  #banner3h1 {
+    font-size: 20px;
+    width: 95%;
+  }
+
+  .firstboxb4 {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  #ii {
+    font-size: 40px;
+  }
+
+  #firstbox4p1 {
+    font-size: 14px;
+  }
+
+  #b4h1, #b5h1 {
+    font-size: 20px;
+  }
+
+  fieldset {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+  }
+
+  input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  #btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  table, th, td {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  tr {
+    margin-bottom: 10px;
+  }
+
+  #footerh1 {
+    font-size: 12px;
+    padding: 20px 10px;
+  }
+
+  #gh, #form3 {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #loginbtn {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 13px;
+  }
 }
