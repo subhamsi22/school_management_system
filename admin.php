@@ -29,7 +29,7 @@ if (!isset($_SESSION['admin'])) {
       <li id="e">Exams</li>
       <li id="r">Results</li>
       <li id="s">Settings</li>
-      <li id="l">Logout</li>
+      <a  href="index.php"><li  id="l">Logout</li></a>
     </ul>
   </div>
 
@@ -327,8 +327,18 @@ mysqli_close($conn2);
 </div>
 <div class="resultsection">
   <h1 class="hg">check the result of the exam here </h1>
-  <input type="text" name="student_name" placeholder="enter student name to check result" id="inputt">
-  <a href="result.php"><button id="res">click hear</button></a>
+  
+
+
+
+  
+  <form action="result.php" method= "post">
+<input type="text" name="student_name" placeholder="enter student name to check result" id="inputt">
+   <a href="result.php"><button id="res">click hear</button></a>
+
+ 
+
+  </form>
 </div>
 
 
