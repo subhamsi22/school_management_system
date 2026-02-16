@@ -325,7 +325,11 @@ mysqli_close($conn2);
 <a href="exam_question.php"><button id="exm">click hear</button></a>
 
 </div>
-
+<div class="resultsection">
+  <h1 class="hg">check the result of the exam here </h1>
+  <input type="text" name="student_name" placeholder="enter student name to check result" id="inputt">
+  <a href="result.php"><button id="res">click hear</button></a>
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

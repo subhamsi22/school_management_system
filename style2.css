@@ -110,14 +110,14 @@ body {
 /* ==================== Time Table ==================== */
 .time-table {
   position: absolute;
-  width: 30%;
-  height: 47%;
-  top: 32%;
-  left: 49%;
-  text-align: center;
-  background: #fff0f0;
-  border-radius: 33px;
-  padding: 20px;
+    width: 30%;
+    height: 47%;
+    top: 36%;
+    left: 51%;
+    text-align: center;
+    background: #fff0f0;
+    border-radius: 33px;
+    padding: 20px;
 }
 
 .time-table h1 {
@@ -164,7 +164,7 @@ body {
     width: 95px;
     position: relative;
     height: 62px;
-    top: -84%;
+    top: -88%;
     padding: 23px;
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -191,11 +191,13 @@ body {
 }
 
 #form1 {
-  position: relative;
-    top: 28%;
-    left: -147%;
-    width: 191px;
+ position: relative;
+    top: 33%;
+    left: -146%;
+    width: 172px;
+    border-right: 2px solid green;
     height: 384px;
+    border-left: 3px solid blue;
     margin: 20px;
     padding: 15px;
     background: #d7a5d7;
@@ -278,7 +280,7 @@ button {
 
 #delet {
 width: 14%;
-    margin: 14px;
+    margin: 8px;
     background: #ff4d4d;
     color: #fff;
     border-radius: 5px;
@@ -288,7 +290,7 @@ width: 14%;
 
 #delett {
 position: absolute;
-    left: 16%;
+    left: 16.5%;
     width: 10%;
     top: 58%;
     margin: 35px 45px;
@@ -301,16 +303,16 @@ position: absolute;
 
 #inputtid {
  width: 12%;
-    margin-left: 27px;
+    margin-left: 18px;
     padding: 8px;
-    border: 5px solid #4dabff;
+    border: 2px solid #4dabff;
     border-radius: 4px;
     text-transform: capitalize;
 }
 
 #deletbut {
  position: absolute;
-    top: 31%;
+    top: 32.5%;
     left: 31%;
     width: 11%;
     padding: 10px 20px;
@@ -323,7 +325,7 @@ position: absolute;
 
 #inputtidtech {
  position: absolute;
-    top: 53%;
+    top: 55%;
     left: 32%;
     width: 9%;
     margin-left: 40px;
@@ -485,3 +487,112 @@ tr:hover {
 #exm:hover {
   background: #2b7fc9;
 }
+
+.resultsection {
+  width: 70%;
+  margin: 40px auto;
+  display: none;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 25px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid rgba(253, 8, 171, 0.89);
+  transition: all 0.3s ease;
+}
+
+.resultsection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 45px rgba(253, 8, 171, 0.2);
+  border-left-color: rgba(16, 18, 99, 0.89);
+}
+
+.resultsection h1.hg {
+  color: #2e2b2b;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, rgba(253, 8, 171, 0.89), rgba(16, 18, 99, 0.89));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resultsection input[type="text"] {
+  width: 60%;
+  padding: 16px 20px;
+  margin: 20px auto;
+  /* display: block; */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #2e2b2b;
+}
+
+.resultsection input[type="text"]::placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.resultsection input[type="text"]:focus {
+  outline: none;
+  border-color: rgba(253, 8, 171, 0.89);
+  box-shadow: 0px 0px 15px rgba(253, 8, 171, 0.2);
+  background: #fff;
+  transform: scale(1.02);
+}
+
+.resultsection a {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.resultsection button {
+  width: 40%;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, rgba(253, 8, 171, 0.89), rgba(253, 80, 200, 0.9));
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  box-shadow: 0px 5px 15px rgba(253, 8, 171, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.resultsection button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(16, 18, 99, 0.89), rgba(10, 12, 60, 0.9));
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.resultsection button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 25px rgba(253, 8, 171, 0.4);
+}
+
+.resultsection button:hover::before {
+  left: 0;
+}
+
+.resultsection button:active {
+  transform: translateY(-1px);
+}
+
+

@@ -756,11 +756,77 @@ a:hover{
     padding: 20px;
 }
 
+/* Result Section Styling */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MOBILE RESPONSIVE STYLES */
 
 /* Tablets and Small Screens (768px and below) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav ul {
     position: relative;
     left: 0;
@@ -1087,6 +1153,31 @@ a:hover{
     padding: 20px;
   }
 
+  .resultsection {
+    width: 90%;
+    margin: 30px auto;
+    display: none;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .resultsection h1.hg {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .resultsection input[type="text"] {
+    width: 85%;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .resultsection button {
+    width: 70%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
   #loginbtn {
     width: 80%;
     height: auto;
@@ -1100,9 +1191,39 @@ a:hover{
     display: block;
     margin: 10px 0;
   }
-}
+} */
 
-/* Mobile Phones (480px and below) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Phones (480px and below)
 @media (max-width: 480px) {
   .banner1, .banner2, .banner3, .banner4, .banner5 {
     height: auto;
@@ -1278,4 +1399,6 @@ a:hover{
   label {
     font-size: 13px;
   }
-}
+
+  
+} */

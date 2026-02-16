@@ -7,6 +7,8 @@ const divider = document.getElementById("op");
 const mainContent = document.querySelector(".main-content");
 const usersContent = document.querySelector(".main_content2");
 const examContent = document.querySelector(".mainforexam");
+const resultcontent = document.querySelector(".resultsection");
+
 
 // Navigation items
 const navItems = {
@@ -76,21 +78,20 @@ animateGraph(studentGraph, studentData);
 
 const teacherData = typeof ph2 !== 'undefined' ? ph2 : [];
 animateGraph(teacherGraph, teacherData);
-
 // ==================== Navigation ====================
 const navigationMap = [
-  { id: navItems.dashboard, section: mainContent, others: [usersContent, examContent] },
-  { id: navItems.users, section: usersContent, others: [mainContent, examContent] },
-  { id: navItems.exams, section: examContent, others: [mainContent, usersContent] },
-  { id: navItems.results, section: null, others: [mainContent, usersContent, examContent] },
+  { id: navItems.dashboard, section: mainContent, others: [usersContent, examContent, resultcontent] },
+  { id: navItems.users, section: usersContent, others: [mainContent, examContent, resultcontent] },
+  { id: navItems.exams, section: examContent, others: [mainContent, usersContent, resultcontent] },
+  { id: navItems.results, section: resultcontent, others: [mainContent, usersContent, examContent] },
   { id: navItems.settings, section: null, others: [mainContent, usersContent, examContent] },
   { id: navItems.logout, section: null, others: [mainContent, usersContent, examContent] }
 ];
-
+var sidebar = document.querySelector(".sidebar");
 navigationMap.forEach(nav => {
   nav.id.addEventListener("click", () => {
     // Update font sizes
-    Object.values(navItems).forEach(item => {
+    Object.values(navItems).forEach(item => { 
       item.style.fontSize = INACTIVE_FONT_SIZE;
     });
     nav.id.style.fontSize = ACTIVE_FONT_SIZE;
@@ -98,10 +99,16 @@ navigationMap.forEach(nav => {
     // Show/hide sections
     if (nav.section) {
       nav.section.style.display = "block";
+      if(nav.section === examContent) {
+        sidebar.style.height = "auto";
+      } else {
+        sidebar.style.height = "100vh";
+      }
     }
     nav.others.forEach(section => {
       section.style.display = "none";
     });
+
   });
 });
 
