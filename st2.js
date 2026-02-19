@@ -1,4 +1,3 @@
-// ==================== DOM Elements ====================
 const mainContainer = document.querySelector(".main_c2");
 const toggleBall = document.querySelector(".ball");
 const deleteSection = document.querySelector(".deletbut");
@@ -38,13 +37,11 @@ const deleteTeacherBtn = document.querySelector(".tech");
 const submitBtn = document.getElementById("sub");
 const examBtn = document.getElementById("exm");
 
-// ==================== Constants ====================
 const ACTIVE_FONT_SIZE = "20px";
 const INACTIVE_FONT_SIZE = "17px";
 const ANIMATION_DURATION = 1;
 const ANIMATION_EASE = "power2.out";
 
-// ==================== Toggle Add Form ====================
 toggleBall.addEventListener("click", () => {
   const isOpen = toggleBall.style.transform === "translateX(30px)";
   
@@ -61,7 +58,6 @@ toggleBall.addEventListener("click", () => {
   }
 });
 
-// ==================== Data Visualization ====================
 function animateGraph(element, dataValue) {
   const total = dataValue * 2;
   const height = 100 - total;
@@ -78,7 +74,6 @@ animateGraph(studentGraph, studentData);
 
 const teacherData = typeof ph2 !== 'undefined' ? ph2 : [];
 animateGraph(teacherGraph, teacherData);
-// ==================== Navigation ====================
 const navigationMap = [
   { id: navItems.dashboard, section: mainContent, others: [usersContent, examContent, resultcontent] },
   { id: navItems.users, section: usersContent, others: [mainContent, examContent, resultcontent] },
@@ -112,7 +107,6 @@ navigationMap.forEach(nav => {
   });
 });
 
-// ==================== Table Toggle ====================
 function createTableToggle(header, table, otherTable, otherHeader) {
   header.addEventListener("click", () => {
     const isVisible = table.style.display === "block";
@@ -136,7 +130,6 @@ function createTableToggle(header, table, otherTable, otherHeader) {
 createTableToggle(studentHeader, studentTable, teacherTable, teacherHeader);
 createTableToggle(teacherHeader, teacherTable, studentTable, studentHeader);
 
-// ==================== Delete Buttons ====================
 deleteStudentBtn.addEventListener("click", () => {
   if (confirm("Are you sure you want to delete all student data?")) {
     window.location.href = "delete.php";
@@ -149,7 +142,6 @@ deleteTeacherBtn.addEventListener("click", () => {
   }
 });
 
-// ==================== Form Submission ====================
 submitBtn.addEventListener("click", () => {
   examBtn.style.display = "block";
 });
