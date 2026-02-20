@@ -1,8 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost","root","","school");
-if (!$conn) {   
-    die("Database connection failed: " . mysqli_connect_error());
-}
+include 'db.php';
 if($_SERVER['REQUEST_METHOD']==="POST"){
 $question_1 = $_POST['question_1'];  
 $question_2 = $_POST['question_2'];

@@ -293,11 +293,8 @@
 
             <?php
                
-                $conn = mysqli_connect("localhost", "root", "", "school");
+              include 'db.php';
 
-                if (!$conn) {
-                    die("connection failed:" . mysqli_connect_error());
-                }
 
                 $error_message = '';
                 $success_message = '';

@@ -9,10 +9,7 @@
 <body>
     <div class="bannerlogin">
 <?php
-$conn =  mysqli_connect("localhost","root","","school");
-if(!$conn){
-die("Connection failed: " . mysqli_connect_error());
-}
+include 'db.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST['username'];

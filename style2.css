@@ -47,6 +47,8 @@ body {
 .main-content {
   flex: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content h1 {
@@ -54,11 +56,26 @@ body {
   margin-top: 0;
 }
 
+.deletbut {
+  background: #fff;
+    width: 246px;
+    padding: 1px;
+    gap: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card {
@@ -102,15 +119,14 @@ body {
 }
 
 .time-table {
-  position: absolute;
-    width: 30%;
-    height: 47%;
-    top: 36%;
-    left: 51%;
-    text-align: center;
-    background: #fff0f0;
-    border-radius: 33px;
+  background: #fff0f0;
+    border-radius: 12px;
     padding: 20px;
+    height: 115px;
+    text-align: center;
+    display: inline-flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 63%;
 }
 
 .time-table h1 {
@@ -119,86 +135,75 @@ body {
 
 #timeh1{
   font-size: 14px;
-    font-weight: 300;
-    background: #3c92a1;
-    color: #fff;
-    width: 95px;
-    position: relative;
-    height: 62px;
-    padding: 23px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    gap: 60px;
-    display: flex;
+  font-weight: 300;
+  background: #3c92a1;
+  color: #fff;
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 #timeh2{
   font-size: 14px;
-    font-weight: 300;
-    background: #3c92a1;
-    color: #fff;
-    width: 95px;
-    position: relative;
-    height: 62px;
-    top: -42%;
-    padding: 23px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    gap: 60px;
-    display: flex;
-    left: 32%;
+  font-weight: 300;
+  background: #3c92a1;
+  color: #fff;
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 #timeh3 {
- font-size: 14px;
-    font-weight: 300;
-    background: #3c92a1;
-    color: #fff;
-    width: 95px;
-    position: relative;
-    height: 62px;
-    top: -88%;
-    padding: 23px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    gap: 60px;
-    display: flex;
-    left: 67%;
+  font-size: 14px;
+  font-weight: 300;
+  background: #3c92a1;
+  color: #fff;
+  width: 80px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #timeh5 {
-  font-size: 24px;
-    font-weight: 300;
-    color: #000000;
-    text-transform: capitalize;
-    padding: 20px;
-    position: relative;
-    margin: 7px 0;
-    top: -91%;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  text-transform: capitalize;
+  padding: 20px;
+  margin: 10px 0;
 }
 
 .main_c2 {
   display: none;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 #form1 {
- position: relative;
-    top: 33%;
-    left: -146%;
-    width: 172px;
-    border-right: 2px solid green;
-    height: 384px;
-    border-left: 3px solid blue;
-    margin: 20px;
-    padding: 15px;
-    background: #d7a5d7;
-    border-radius: 16px;
-    font-weight: 700;
-    text-align: center;
-    box-shadow: inset 18px -20px 20px 20px #d5d5d5;
-    overflow-y: auto;
-
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -270,84 +275,79 @@ button {
 }
 
 #delet {
-width: 14%;
-    margin: 8px;
-    background: #ff4d4d;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+  width: auto;
+  margin: 0;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#delet:hover {
+  background: #e60000;
 }
 
 #delett {
-position: absolute;
-    left: 16.5%;
-    width: 10%;
-    top: 58%;
-    margin: 35px 45px;
-    background: #4dabff;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+  width: auto;
+  margin: -3px;
+  padding: 10px 20px;
+  background: #4dabff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 #inputtid {
- width: 12%;
-    margin-left: 18px;
-    padding: 8px;
-    border: 2px solid #4dabff;
-    border-radius: 4px;
-    text-transform: capitalize;
+  width: 150px;
+  margin: 4px;
+  padding: 8px;
+  border: 2px solid #4dabff;
+  border-radius: 4px;
 }
 
 #deletbut {
- position: absolute;
-    top: 32.5%;
-    left: 31%;
-    width: 11%;
-    padding: 10px 20px;
-    margin: 39px;
-    background: #ff4d4d;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
+  width: auto;
+  margin: 0;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#deletbut:hover {
+  background: #e60000;
 }
 
 #inputtidtech {
- position: absolute;
-    top: 55%;
-    left: 32%;
-    width: 9%;
-    margin-left: 40px;
-    padding: 8px;
-    border: 5px solid #4dabff;
-    border-radius: 4px;
-    text-transform: capitalize;
+  width: 150px;
+  margin: 0;
+  padding: 8px;
+  border: 2px solid #4dabff;
+  border-radius: 4px;
 }
 
 #deletttech {
-position: absolute;
-    top: 57%;
-    left: 32%;
-    width: 8%;
-    padding: 10px 20px;
-    margin: 39px;
-    background: #4dabff;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
+  width: auto;
+  margin: 0;
+  padding: 10px 20px;
+  background: #4dabff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .slidebutton {
-  position: absolute;
-  top: 17%;
-  left: 94%;
-  width: 62px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
   height: 30px;
   background: #ebe5e5;
   border-radius: 31px;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .ball {
@@ -362,32 +362,31 @@ position: absolute;
 }
 
 #op {
-  position: absolute;
-  top: 0;
-  left: 55.3%;
-  width: 2px;
-  height: 100%;
-  background: #857e7e;
+  display: none;
 }
 
 .main_content2 {
   display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 #stud {
-  display: table;
-  width: 180px;
-  margin: 30%;
-  padding: 20px;
+  display: inline-block;
+  width: auto;
+  margin: 20px 0;
+  padding: 15px 30px;
   background: #fff;
   color: #121212;
-  font-size: 148%;
+  font-size: 18px;
   text-transform: capitalize;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.2s ease;
+  border: none;
 }
 
 #stud:hover {
@@ -395,15 +394,13 @@ position: absolute;
 }
 
 table {
- position: absolute;
-    left: 33%;
-    width: 64%;
-    top: 15%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 th {
@@ -583,6 +580,489 @@ tr:hover {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+/* Mobile Friendly Media Queries */
+@media (max-width: 1024px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar ul li {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .cardd {
+    width: 100%;
+  }
+
+  .time-table {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .deletbut {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #delet, #deletbut {
+    width: 100%;
+  }
+
+  #delett, #deletttech {
+    width: 100%;
+  }
+
+  #inputtid, #inputtidtech {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  #form1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .resultsection {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .resultsection input[type="text"] {
+    width: 100%;
+  }
+
+  .resultsection button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+
+  .sidebar ul li {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .main-content h1 {
+    font-size: 24px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card span {
+    font-size: 24px;
+  }
+
+  .cardd {
+    width: 100%;
+    height: 120px;
+  }
+
+  .time-table {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  #timeh1, #timeh2, #timeh3 {
+    width: 60px;
+    height: 50px;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  #timeh5 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .deletbut {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  #delet, #deletbut {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  #inputtid, #inputtidtech {
+    width: 120px;
+    padding: 6px;
+  }
+
+  #delett, #deletttech {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .slidebutton {
+    width: 50px;
+    height: 26px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .ball {
+    width: 22px;
+    height: 22px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  #stud {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  #form1 {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  #inputt {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  #sub {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .mainforexam {
+    padding: 10px 0;
+  }
+
+  .mainforexam h1 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .mainforexam fieldset {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  #exm {
+    width: 90%;
+    height: 28px;
+    padding: 5px 10px;
+    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .resultsection {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .resultsection h1.hg {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .resultsection input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .resultsection button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    padding: 8px;
+    width: 100%;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .sidebar ul li {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 8px;
+  }
+
+  .main-content h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .card span {
+    font-size: 20px;
+  }
+
+  .cardd {
+    width: 100%;
+    height: 100px;
+  }
+
+  .time-table {
+    padding: 10px;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  #timeh1, #timeh2, #timeh3 {
+    width: 50px;
+    height: 45px;
+    font-size: 10px;
+    padding: 3px;
+    margin: 3px;
+  }
+
+  #timeh5 {
+    font-size: 14px;
+    padding: 8px;
+    margin: 5px 0;
+  }
+
+  .deletbut {
+    padding: 10px;
+    gap: 8px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .deletbut form {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #delet, #deletbut {
+    width: 100%;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  #inputtid, #inputtidtech {
+    width: 100%;
+    padding: 6px;
+  }
+
+  #delett, #deletttech {
+    width: 100%;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .slidebutton {
+    width: 45px;
+    height: 24px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .ball {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 2px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  td {
+    width: auto;
+  }
+
+  #stud {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  #form1 {
+    max-width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  label {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  #inputt {
+    height: 18px;
+    font-size: 11px;
+    margin: 6px 0;
+  }
+
+  #sub {
+    height: 18px;
+    font-size: 11px;
+    width: 85%;
+  }
+
+  .mainforexam {
+    padding: 5px 0;
+  }
+
+  .mainforexam h1 {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .mainforexam fieldset {
+    margin: 8px;
+    padding: 12px;
+  }
+
+  #exm {
+    width: 85%;
+    height: 26px;
+    padding: 4px 8px;
+    font-size: 11px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+
+  .resultsection {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .resultsection h1.hg {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .resultsection input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    margin: 10px auto;
+  }
+
+  .resultsection button {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .main_c2 {
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .main_content2 {
+    gap: 15px;
+    width: 100%;
+  }
 }
 
 

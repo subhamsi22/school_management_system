@@ -1,8 +1,6 @@
 <?php
-$connection = mysqli_connect("localhost", "root", "", "school");
-if (!$connection) {
-    die("Database connection failed: " . mysqli_connect_error());
-}   
+include 'db.php';
+   
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["deletee"])) {
     $id = $_POST["id"];
     $sql = "DELETE FROM techdet WHERE id = $id";

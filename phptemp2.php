@@ -1,8 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost","root","","school");
-if(!$conn){
-    die("not reached to the databse".mysqli_connect_error());
-}
+include 'db.php';
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = isset($_POST['student_id']) ? mysqli_real_escape_string($conn, $_POST['student_id']) : '';

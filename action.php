@@ -13,17 +13,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST'){
     $tex = $_POST['text'];
     $messag = $_POST['message'];
 
-    // Database connection
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "school";
-   
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    
+   include 'db.php';
 
     $sql = "INSERT INTO schoolstu
      (name, email, tex, messag) 

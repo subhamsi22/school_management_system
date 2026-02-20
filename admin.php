@@ -204,13 +204,10 @@ else{
       </tr>
       <?php
        
-$connection = mysqli_connect("localhost", "root", "", "school");
-if (!$connection) {
-    die("Database connection failed: " . mysqli_connect_error());
-}
+include 'db.php';
 
       $sql1 = "SELECT * FROM studet";
-      $result1 = mysqli_query($connection,$sql1);
+      $result1 = mysqli_query($conn,$sql1);
 
       if (mysqli_num_rows($result1) > 0) {
           while($roww = $result1->fetch_assoc()) {
@@ -225,7 +222,7 @@ if (!$connection) {
       } else {
           echo "<tr><td colspan='5'>No students found</td></tr>";
       }
-      mysqli_close($connection);
+      mysqli_close($conn);
       ?>
     </table>
     <div class="table2">
@@ -239,12 +236,9 @@ if (!$connection) {
         </tr>
         <?php
 
-$conn2 =  mysqli_connect("localhost", "root", "", "school");
-if (!$conn2) {
-  die("Database connection failed: " . mysqli_connect_error());
-}
+include 'db.php';
 $msql2 = "SELECT * FROM techdet";
-$result2  = mysqli_query($conn2,$msql2);
+$result2  = mysqli_query($conn,$msql2);
 if(mysqli_num_rows($result2) > 0){
   while($rowww =  $result2->fetch_assoc()){
 
@@ -261,7 +255,7 @@ if(mysqli_num_rows($result2) > 0){
     echo "<tr><td colspan='5'>No teachers found</td></tr>";
   }
 
-mysqli_close($conn2);
+mysqli_close($conn);
 
 
 ?>

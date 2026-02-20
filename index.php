@@ -11,24 +11,29 @@
 <body>
   <div class="banner1">
     <div class="nav">
-      <ul>
-        <li><a href="home">home</a></li>
-        <li><a href="service">service</a></li>
-        <li><a href="about">about</a></li>
-        <li><a href="login.php"> login</a></li>
-        <li><a href="contact-us">purchase </a></li>
-      </ul>
-    </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navMenu" class="nav-menu" role="navigation" aria-hidden="true">
+          <ul>
+            <li><a href="home">home</a></li>
+            <li><a href="service">service</a></li>
+            <li><a href="about">about</a></li>
+            <li><a href="login.php">login</a></li>
+            <li><a href="contact-us">purchase</a></li>
+          </ul>
+        </nav>
+      </div>
 
 <div class="text">
-  <h1 class="hh1">school   Management  system </h1>
+  <h1 class="hh1">school Management system</h1>
 </div>
-<p id="p1"> streamline your school operations </p>
-<p id="p2">efficienly manage student records, schedules</p>
-<p id="p3"> and communication in one place</p>
-<button id="butt"> get - started</button>
-
-
+<p id="p1">streamline your school operations</p>
+<p id="p2">efficiently manage student records, schedules</p>
+<p id="p3">and communication in one place</p>
+<button id="butt">get started</button>
 
   </div>
   <div class="banner2">
@@ -200,6 +205,41 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+// Mobile Menu Toggle (improved accessibility)
+const toggleBtn = document.getElementById('mobileMenuToggle');
+const navMenuEl = document.getElementById('navMenu');
+
+toggleBtn.addEventListener('click', function() {
+  const isActive = navMenuEl.classList.toggle('active');
+  this.classList.toggle('active');
+  this.setAttribute('aria-expanded', isActive);
+  navMenuEl.setAttribute('aria-hidden', !isActive);
+});
+
+// Close menu when a link is clicked (also update ARIA)
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', function() {
+    navMenuEl.classList.remove('active');
+    toggleBtn.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    navMenuEl.setAttribute('aria-hidden', 'true');
+  });
+});
+
+// Close on Escape key for keyboard users
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (navMenuEl.classList.contains('active')) {
+      navMenuEl.classList.remove('active');
+      toggleBtn.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      navMenuEl.setAttribute('aria-hidden', 'true');
+      toggleBtn.focus();
+    }
+  }
+});
+</script>
 <script src="st.js"></script>
 </body>
 </html>

@@ -1,15 +1,12 @@
 <?php 
-$connection = mysqli_connect("localhost", "root", "", "school");
-if (!$connection) {
-    die("Database connection failed: " . mysqli_connect_error());
-}   
+include 'db.php';   
 $sql = "DELETE FROM techdet";
-if (mysqli_query($connection, $sql)) {
+if (mysqli_query($conn, $sql)) {
     echo "All records deleted successfully";
 } else {
-    echo "Error deleting records: " . mysqli_error($connection);
+    echo "Error deleting records: " . mysqli_error($conn);
 }
 
 $sql2 = "ALTER TABLE techdet AUTO_INCREMENT = 1";
-mysqli_query($connection, $sql2);
+mysqli_query($conn, $sql2);
 ?>
