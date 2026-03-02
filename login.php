@@ -299,13 +299,15 @@
                 $error_message = '';
                 $success_message = '';
 
-                $sql = "SELECT * FROM signup";
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
+               
 
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $username = $_POST['username'];
                     $password = $_POST['password'];
+
+                     $sql = "SELECT * FROM signup WHERE username = '$username' AND pass = '$password'";
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($result);
 
                     if ($username == $row['username'] && $password == $row['pass']) {
                         $_SESSION['admin'] = $username;
